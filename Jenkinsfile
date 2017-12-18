@@ -5,6 +5,9 @@ pipeline {
         jdk 'jdk8'
     }
     stages {
+        stage('Checkout') {
+            checkout scm
+        }
         stage ('Initialize') {
             steps {
                 sh '''
